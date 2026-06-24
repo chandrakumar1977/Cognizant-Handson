@@ -1,15 +1,9 @@
-//singleton pattern
 class Logger {
 
-    // Create single instance
     private static Logger instance;
-
-    // Private constructor
     private Logger() {
         System.out.println("Logger instance created");
     }
-
-    // Method to get single instance
     public static Logger getInstance() {
         if (instance == null) {
             instance = new Logger();
@@ -17,7 +11,6 @@ class Logger {
         return instance;
     }
 
-    // Logging method
     public void log(String message) {
         System.out.println("LOG: " + message);
     }
@@ -45,27 +38,4 @@ public class singleton{
         }
     }
 }
-//Concept Summary
-//private constructor
-//
-//→ Outside object create prevent
-//
-//static instance
-//
-//→ One shared object store
-//
-//getInstance()
-//
-//→ Object create/reuse
-//
-//log()
-//
-//→ Work perform
-//
-//==
-//
-//→ Same object check
-//
-//One line memory trick:
-//
-//Singleton = Constructor private + Static object + getInstance() + Same object for everyone
+
